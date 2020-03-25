@@ -5,8 +5,8 @@
   </a>
   <div class="spacer"></div>
   <nav role="navigation" class="nav__container">
-    <a class="nav" href="#">Portfolio</a>
-    <a class="nav" href="#">Blog</a>
-    <a class="nav" href="#">About</a>
+    {{ range .Site.Menus.header}}
+      <a class="nav" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+    {{ end}}
   </nav>
 </header>
