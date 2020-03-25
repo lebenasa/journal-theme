@@ -1,0 +1,61 @@
+body {
+    background: #224;
+    color: #ddd;
+    font-size: 16px;
+    font-family: Verdana, Helvetica;
+}
+
+.header {
+    display: flex;
+    margin: 0.5em 1em;
+    flex-flow: row;
+    align-items: center;
+}
+
+.header__logo {
+    display: inline-block;
+    width: auto;
+    height: 1.5em;
+    margin: 0.5em;
+}
+
+.header__title {
+    display: inline-block;
+    flex: 1 0 25%;
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+.nav {
+    padding: 0.5em 0.25em;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.main {
+    min-height: 100vh;
+}
+
+.footer {
+    display: block;
+    margin: 0.5em auto;
+    max-width: 800px;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strikethrough {
+    text-decoration: strikethrough;
+}
