@@ -4,13 +4,22 @@ body {
     font-size: 16px;
     font-family: Verdana, Helvetica;
     letter-spacing: 2px;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
 }
 
 .header {
     display: flex;
+    position: sticky;
+    top: 0;
     margin: 0.5em 1em;
     flex-flow: row;
+    flex-wrap: wrap;
     align-items: center;
+    background: #224;
+    border-bottom: 1px solid #88d;
 }
 
 .header__gohome {
@@ -53,6 +62,8 @@ body {
     border: solid 1px transparent;
     color: #ddd;
     text-decoration: none;
+    word-break: keep-all;
+    white-space: nowrap;
     transition: background-color 200ms ease-out;
 }
 
