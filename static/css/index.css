@@ -3,6 +3,7 @@ body {
     color: #ddd;
     font-size: 16px;
     font-family: Verdana, Helvetica;
+    letter-spacing: 2px;
 }
 
 .header {
@@ -12,24 +13,26 @@ body {
     align-items: center;
 }
 
+.header__gohome {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+}
+
 .header__logo {
     display: inline-block;
     width: auto;
     height: 1.5em;
     margin: 0.5em;
+    margin-right: 1em;
 }
 
 .header__title {
     display: inline-block;
-    flex: 1 0 25%;
+    flex: 0 1 100%;
     margin: 0 auto;
     font-size: 1em;
-}
-
-.nav {
-    padding: 0.5em 0.25em;
-    color: #ddd;
-    text-decoration: none;
 }
 
 .main {
@@ -42,6 +45,38 @@ body {
     max-width: 800px;
     font-size: 0.75em;
     text-align: center;
+}
+
+.nav {
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    border: solid 1px transparent;
+    color: #ddd;
+    text-decoration: none;
+    transition: background-color 200ms ease-out;
+}
+
+.nav--nofocus {
+    border: 0;
+    background: transparent;
+}
+
+.nav:focus,
+.nav:hover,
+.nav:active {
+    border: solid 1px #555;
+    background: #448;
+}
+
+.nav--nofocus:focus,
+.nav--nofocus:hover,
+.nav--nofocus:active {
+    border: 0;
+    background: transparent;
+}
+
+.spacer {
+    flex: 1 0 auto;
 }
 
 .italic {
