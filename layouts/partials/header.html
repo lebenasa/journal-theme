@@ -1,10 +1,15 @@
 <header class="header">
   <a class="header__gohome nav nav--nofocus" href="/">
-    <img class="header__logo" src="/img/la-insignia.png" alt="" />
+    <img class="header__logo" src="/img/la-insignia.svg" alt="" />
     <h1 class="header__title">{{.Title}}</h1>
   </a>
   <div class="spacer"></div>
-  <nav role="navigation" class="nav__container">
+  <nav role="navigation" class="nav__container nav__container--wide">
+    {{ range .Site.Menus.header}}
+      <a class="nav" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+    {{ end}}
+  </nav>
+  <nav role="navigation" class="nav__container nav__container--narrow">
     {{ range .Site.Menus.header}}
       <a class="nav" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
     {{ end}}
