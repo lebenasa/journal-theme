@@ -68,4 +68,10 @@
     &__wrapper p {
         @include serif;
     }
+
+    &--preview {
+        .figure__img {
+            margin: 0;
+        }
+    }
 }
