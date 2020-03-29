@@ -7,20 +7,18 @@
     <div class="card__container">
       {{ range first 10 .Site.RegularPages }}
         <article class="article article--preview">
-          <a class="article__category link" href="#">
-            {{ .Params.category }}
-          </a>
-          <h2 class="article__headline">
-            <a class="link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </h2>
-          <p class="article__date">
-            Published on {{ .PublishDate.Format "2 January 2006" }}
+          <p class="article__category">
+            <span>{{ .Params.category }}</span>
           </p>
+          <h1 class="article__headline">
+            <a class="link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h1>
           {{ if .Description }}
             <p class="article__summary">{{ .Description }}</p>
-          {{ else }}
-            <p class="article__summary">{{ .Summary }}</p>
           {{ end }}
+          <p class="article__date">
+            Published on {{ .PublishDate.Format "2 January 2006" }}.
+          </p>
         </article>
       {{ end }}
     </div>

@@ -3,21 +3,69 @@
 
     &__category {
         @include main-column;
+        @include font-s;
+
         display: block;
-        text-decoration: underline;
-        font-size: 0.875em;
+        margin-bottom: 0.25rem;
+        text-transform: uppercase;
+
+        span {
+            padding: 0.25rem;
+            border-bottom: 2px solid #{$accent};
+        }
     }
 
     &__headline {
         @include main-column;
-    }
-
-    &__date {
-        @include main-column;
-        font-size: 0.875em;
+        
+        margin-top: 1rem;
+        margin-bottom: 0;
     }
 
     &__summary {
         @include main-column;
+
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    &__date {
+        @include main-column;
+        @include font-s;
+
+        margin-bottom: 1rem;
+    }
+
+    &__poster {
+        img {
+            max-height: 600px;
+        }
+    }
+
+    &__poster,
+    &__wrapper p,
+    &__wrapper h2,
+    &__wrapper h3,
+    &__wrapper pre {
+        @include main-column;
+    }
+
+    &__wrapper a {
+        @include link;
+    }
+
+    &__wrapper h2,
+    &__wrapper h3 {
+        margin-top: 2rem;
+    }
+
+    &__headline,
+    &__summary,
+    &__date,
+    &__wrapper h1,
+    &__wrapper h2,
+    &__wrapper h3,
+    &__wrapper p {
+        @include serif;
     }
 }

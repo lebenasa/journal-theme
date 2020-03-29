@@ -1,0 +1,29 @@
+{{ define "main" }}
+<main role="main" class="">
+  <article class="article article--main">
+    <p class="article__category">
+      <span>{{ .Params.category }}<span>
+    </p>
+    <h1 class="article__headline">
+      {{ .Title }}
+    </h1>
+    {{ if .Description }}
+      <p class="article__summary">{{ .Description }}</p>
+    {{ end }}
+    <p class="article__date">
+      Published on {{ .PublishDate.Format "2 January 2006" }}.
+    </p>
+    {{ with .Resources.GetMatch "index_image" }}
+      <figure class="article__poster figure">
+        <img class="figure__img" src="{{ .RelPermalink }}" />
+        <figcaption class="figure__caption">
+          {{ .Title | safeHTML }}
+        </figcaption>
+      </figure>
+    {{ end }}
+    <div class="article__wrapper">
+      {{ .Content }}
+    </div>
+  </article>
+</main>
+{{ end}}

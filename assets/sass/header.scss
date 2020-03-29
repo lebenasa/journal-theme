@@ -34,9 +34,11 @@
     }
 
     &__title {
+        @include serif;
+
         display: inline-block;
         flex: 0 1 100%;
         margin: 0 auto;
-        font-size: 1.25em;
+        font-size: 1.5rem;
     }
 }
