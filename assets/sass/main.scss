@@ -1,0 +1,137 @@
+body {
+    background: #224;
+    color: #ddd;
+    font-size: 16px;
+    font-family: Verdana, Helvetica;
+    letter-spacing: 2px;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin: 0.5em;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #224;
+    border-bottom: 1px solid #88d;
+
+    &__gohome {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 0 0 auto;
+    }
+
+    &__logo {
+        display: inline-block;
+        width: auto;
+        height: 1.5em;
+        margin: 0.5em;
+        margin-right: 1em;
+        margin-left: 0;
+    }
+
+    &__title {
+        display: inline-block;
+        flex: 0 1 100%;
+        margin: 0 auto;
+        font-size: 1em;
+    }
+}
+
+.main {
+    min-height: 100vh;
+}
+
+.footer {
+    display: block;
+    margin: 0.5em auto;
+    max-width: 800px;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.nav__container--narrow {
+    display: block;
+}
+
+.nav__container--wide {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .header {
+        margin: 0.5em 1em;
+    }
+
+    .header__logo {
+        margin-left: 0.5em;
+    }
+
+    .nav__container--narrow {
+        display: none;
+    }
+
+    .nav__container--wide {
+        display: block;
+    }
+}
+
+.nav {
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    border: solid 1px transparent;
+    color: #ddd;
+    text-decoration: none;
+    word-break: keep-all;
+    white-space: nowrap;
+    transition: background-color 200ms ease-out;
+
+    &--nofocus {
+        border: 0;
+        background: transparent;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        border: solid 1px #555;
+        background: #448;
+    }
+
+    &--nofocus:focus,
+    &--nofocus:hover,
+    &--nofocus:active {
+        border: 0;
+        background: transparent;
+    }
+}
+
+.spacer {
+    flex: 1 0 auto;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strikethrough {
+    text-decoration: strikethrough;
+}
+
+
+
