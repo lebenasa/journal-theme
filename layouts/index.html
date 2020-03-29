@@ -4,9 +4,24 @@
       <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
       {{.Content}}
     </div>
-    <div>
+    <div class="card__container">
       {{ range first 10 .Site.RegularPages }}
-          {{ .Render "summary"}}
+        <article class="article article--preview">
+          <a class="article__category link" href="#">
+            {{ .Params.category }}
+          </a>
+          <h2 class="article__headline">
+            <a class="link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+          <p class="article__date">
+            Published on {{ .PublishDate.Format "2 January 2006" }}
+          </p>
+          {{ if .Description }}
+            <p class="article__summary">{{ .Description }}</p>
+          {{ else }}
+            <p class="article__summary">{{ .Summary }}</p>
+          {{ end }}
+        </article>
       {{ end }}
     </div>
   </main>

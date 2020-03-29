@@ -1,0 +1,81 @@
+body {
+    font-size: 16px;
+    font-family: Verdana, Helvetica;
+    letter-spacing: 1px;
+    background: $background;
+    color: $color;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+.link {
+    color: $color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: $color-active;
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: $color-disabled;
+    }
+}
+
+.button {
+    padding: 0.5em 1em;
+    color: $color;
+    background: $background-active;
+    border: 1px solid transparent;
+    border-radius: 0.25em;
+    text-decoration: none;
+    transition: background-color 200ms ease-out, border-color 200ms ease-out;
+
+    &:focus,
+    &:hover,
+    &:active {
+        background: $background;
+        border: 1px solid #{$accent};
+    }
+
+    &--nofocus {
+        border: 0;
+        background: transparent;
+
+        &:focus,
+        &:hover,
+        &:active {
+            border: 0;
+            background: transparent;
+        }
+    }
+}
+
+.spacer {
+    flex: 1 0 auto;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strikethrough {
+    text-decoration: strikethrough;
+}
+
+@mixin main-column {
+    margin: 0.5em auto;
+    max-width: 1024px;
+}

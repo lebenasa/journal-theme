@@ -1,0 +1,23 @@
+.article {
+    margin: 0.5em auto;
+
+    &__category {
+        @include main-column;
+        display: block;
+        text-decoration: underline;
+        font-size: 0.875em;
+    }
+
+    &__headline {
+        @include main-column;
+    }
+
+    &__date {
+        @include main-column;
+        font-size: 0.875em;
+    }
+
+    &__summary {
+        @include main-column;
+    }
+}
