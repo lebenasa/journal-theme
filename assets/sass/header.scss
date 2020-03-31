@@ -2,28 +2,31 @@
     @include main-column;
 
     display: flex;
-    padding-bottom: 1em;
     flex-flow: row;
     flex-wrap: wrap;
     align-items: center;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #{$accent};
 
     @media (min-width: 600px) {
         margin: 0.5em auto;
         padding-bottom: 0.25em;
-        border-bottom: 1px solid #88d;
     }
 
     &__gohome {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        flex: 1 0 auto;
+        flex: 0 1 auto;
         padding: 0;
-        padding-bottom: 1em;
 
         @media (min-width: 600px) {
             padding-bottom: 0;
         }
+    }
+
+    &__spacer {
+        flex: 1 0 100px;
     }
 
     &__logo {
@@ -34,11 +37,21 @@
     }
 
     &__title {
-        @include serif;
+        @include font-m;
 
         display: inline-block;
         flex: 0 1 100%;
         margin: 0 auto;
-        font-size: 1.5rem;
+    }
+
+    &__menu {
+        margin: 0.5rem 0;
+        align-self: center;
+    }
+
+    &__menu-item {
+        @include font-m;
+        
+        padding: 0.5rem;
     }
 }

@@ -1,16 +1,23 @@
 @mixin main-column {
     margin: 0.5rem auto;
-    max-width: 900px;
+    max-width: 1280px;
 }
 
 @mixin serif {
-    font-family: Palatino, "Times New Roman", serif;
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+}
+
+@mixin sans-serif {
+    font-family: OpenSans, Verdana, Helvetica, sans-serif;
+}
+
+@mixin monospace {
+    font-family: UbuntuMono, Inconsolata, monospace;
 }
 
 @mixin link {
-    color: $color-active;
+    color: $color-link;
     text-decoration: none;
-    font-weight: bold;
 
     &:focus,
     &:hover,
@@ -21,6 +28,22 @@
 
     &:visited {
         color: $color-visited;
+    }
+
+    &--nofocus,
+    &--novisit {
+        color: $color;
+    }
+
+    &--nofocus:focus,
+    &--nofocus:hover,
+    &--nofocus:active {
+        text-decoration: none;
+    }
+
+    &--novisit:visited,
+    &--nofocus:visited {
+        color: $color;
     }
 }
 
@@ -35,17 +58,29 @@
 }
 
 @mixin font-m {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 @mixin font-s {
-    font-size: 1rem;
+    font-size: 0.875rem;
     line-height: 1.25rem;
 }
 
 @mixin font-xs {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     line-height: 1rem;
 }
 
+@mixin tagline {
+    @include font-s;
+    @include sans-serif;
+
+    display: block;
+    text-transform: uppercase;
+
+    span {
+        padding: 0.25rem;
+        border-bottom: 2px solid #{$accent};
+    }
+}

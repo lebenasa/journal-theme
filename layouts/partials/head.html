@@ -1,6 +1,35 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1">
+<title>
+    {{ block "title" . }}
+        {{ with .Params.Title }} {{ . }} | {{ end }}{{ .Site.Title }}
+    {{ end }}
+</title>
+{{ hugo.Generator }}
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+{{ else }}
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+{{ end }}
 {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | fingerprint }}
 <link href="{{ $style.Permalink }}" rel="stylesheet">
+
+<link rel="shortcut icon" href="/img/la-insignia.svg" type="image/x-icon" />
+
+{{ if .OutputFormats.Get "RSS" }}
+{{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
+{{ end }}
+
+{{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/schema.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
+
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}

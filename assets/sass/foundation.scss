@@ -1,4 +1,19 @@
-@import './mixins.scss';
+@import "./mixins.scss";
+
+@font-face {
+    font-family: "Merriweather";
+    src: local("Merriweather"), url("../font/Merriweather-Regular.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSans"), url("../font/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "UbuntuMono";
+    src: local("UbuntuMono"), url("../font/UbuntuMono-Regular.ttf");
+}
 
 body {
     font-size: 16px;
@@ -13,11 +28,16 @@ body {
 
 h1 {
     @include font-xl;
+    @include serif;
+
+    font-weight: normal;
 }
 
 h2 {
     @include font-l;
-    
+    @include serif;
+
+    font-weight: normal;
     margin-top: 1rem;
 }
 
@@ -30,6 +50,10 @@ h3 {
 
 p {
     @include font-m;
+}
+
+code {
+    @include monospace;
 }
 
 .link {
@@ -80,8 +104,17 @@ p {
     }
 }
 
-.spacer {
-    flex: 1 0 auto;
+.off-screen {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.weak {
+    color: $color-weak;
 }
 
 .italic {
