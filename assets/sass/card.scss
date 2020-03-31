@@ -1,9 +1,38 @@
 .card {
+    position: relative;
+    width: 100%;
+
     &__container {
         @include main-column;
     }
 
     &__category {
         @include tagline;
+
+        margin-top: 0;
+    }
+
+    &__headline {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    &__summary {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    &__date {
+        @include font-s;
+
+        margin-bottom: 1rem;
+    }
+
+    &__poster {
+        max-width: 600px;
+
+        img {
+            max-height: 400px;
+        }
     }
 }
