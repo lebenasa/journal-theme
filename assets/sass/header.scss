@@ -5,7 +5,8 @@
     flex-flow: row;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: 1px solid #88d;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #{$accent};
 
     @media (min-width: 600px) {
         margin: 0.5em auto;

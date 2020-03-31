@@ -16,7 +16,7 @@
 }
 
 @mixin link {
-    color: $color;
+    color: $color-link;
     text-decoration: none;
 
     &:focus,
@@ -30,12 +30,18 @@
         color: $color-visited;
     }
 
+    &--nofocus,
+    &--novisit {
+        color: $color;
+    }
+
     &--nofocus:focus,
     &--nofocus:hover,
     &--nofocus:active {
         text-decoration: none;
     }
 
+    &--novisit:visited,
     &--nofocus:visited {
         color: $color;
     }

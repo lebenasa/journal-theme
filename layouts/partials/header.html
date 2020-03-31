@@ -6,7 +6,7 @@
   <div class="header__spacer spacer"></div>
   <nav role="navigation" class="header__menu nav__container">
     {{ range .Site.Menus.header}}
-      <a class="header__menu-item nav link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+      <a class="header__menu-item nav link link--novisit" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
     {{ end }}
   </nav>
 </header>
