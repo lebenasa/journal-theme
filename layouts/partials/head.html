@@ -1,6 +1,15 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1">
+<title>
+    {{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}
+</title>
+{{ hugo.Generator }}
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+{{ else }}
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+{{ end }}
 {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | fingerprint }}
 <link href="{{ $style.Permalink }}" rel="stylesheet">

@@ -6,22 +6,22 @@
     </div>
     <div class="card__container">
       {{ range first 10 .Site.RegularPages }}
-        <article class="article article--preview">
-          <p class="article__category">
+        <article class="card card--huge">
+          <p class="card__category">
             <span>{{ .Params.category }}</span>
           </p>
           {{ with .Resources.GetMatch "index_image" }}
-          <figure class="article__poster figure">
-            <img class="figure__img" src="{{ .RelPermalink }}" />
-          </figure>
+            <figure class="card__poster figure">
+              <img class="figure__img" src="{{ .RelPermalink }}" />
+            </figure>
           {{ end }}
-          <h1 class="article__headline">
+          <h1 class="card__headline">
             <a class="link" href="{{ .RelPermalink }}">{{ .Title }}</a>
           </h1>
           {{ if .Description }}
-            <p class="article__summary">{{ .Description }}</p>
+            <p class="card__summary">{{ .Description }}</p>
           {{ end }}
-          <p class="article__date">
+          <p class="card__date">
             Published on {{ .PublishDate.Format "2 January 2006" }}.
           </p>
         </article>

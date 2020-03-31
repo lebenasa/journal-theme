@@ -1,0 +1,9 @@
+.card {
+    &__container {
+        @include main-column;
+    }
+
+    &__category {
+        @include tagline;
+    }
+}

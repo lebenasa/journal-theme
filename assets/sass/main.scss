@@ -1,15 +1,16 @@
 $background: #001;
-$color: #ddd;
+$color: #fff;
 $accent: #779;
-$color-active: #ddf;
-$color-visited: #eef;
-$color-disabled: #ccc;
+$color-active: #dde;
+$color-visited: #ccc;
+$color-disabled: #888;
 $background-active: #223;
 
 @import './foundation.scss';
 @import './header.scss';
 @import './footer.scss';
 
+@import './card.scss';
 @import './article.scss';
 
 .main {
