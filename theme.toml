@@ -3,16 +3,16 @@
 
 name = "Leben"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+licenselink = "https://github.com/lebenasa/journal-theme/blob/master/LICENSE"
+description = "Dark theme."
+homepage = "https://www.lebenasa.com/"
 tags = []
 features = []
 min_version = "0.41"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Leben Asa"
+  homepage = "https://www.lebenasa.com"
 
 # If porting an existing theme
 [original]
