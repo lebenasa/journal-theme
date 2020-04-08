@@ -1,5 +1,5 @@
 @mixin main-column {
-    margin: 0.5rem auto;
+    margin: 1rem auto;
     max-width: 1280px;
 }
 
@@ -22,7 +22,6 @@
     &:focus,
     &:hover,
     &:active {
-        color: $color-active;
         text-decoration: underline;
     }
 
@@ -48,8 +47,8 @@
 }
 
 @mixin font-xl {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
 }
 
 @mixin font-l {

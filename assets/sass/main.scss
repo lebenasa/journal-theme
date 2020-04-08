@@ -1,24 +1,16 @@
-$color-primary-0: #1678FF;	// Main Primary color */
-$color-primary-1: #ABCFFF;
-$color-primary-2: #7CB3FF;
-$color-primary-3: #003C8F;
-$color-primary-4: #002E6E;
+$midnight: #000839;
+$steel: #005082;
+$sky: #00a8cc;
+$yolk: #ffa41b;
+$paper: #ecfbfc;
 
-$color-complement-0: #FF9F00;	// Main Complement color */
-$color-complement-1: #FFDDA4;
-$color-complement-2: #FFC970;
-$color-complement-3: #D98700;
-$color-complement-4: #A76800;
-
-$background: #001;
-$color: #fff;
-$color-weak: #bbb;
-$accent: $color-primary-0;
-$color-link: $color-complement-1;
-$color-active: $color-complement-2;
-$color-visited: $color-primary-1;
+$background: $midnight;
+$color: $paper;
+$accent: $steel;
+$color-link: $yolk;
+$color-visited: $sky;
 $color-disabled: #888;
-$background-active: #223;
+$background-control: $steel;
 
 @import './foundation.scss';
 @import './header.scss';
