@@ -78,6 +78,9 @@ p {
 
 code {
     @include monospace;
+
+    font-size: 1.125rem;
+    line-height: 1.5rem;
 }
 
 .link {
@@ -87,7 +90,7 @@ code {
 .button {
     padding: 0.5em 1em;
     color: $color;
-    background: $background-active;
+    background: $background;
     border: 1px solid transparent;
     border-radius: 0.25em;
     text-decoration: none;
@@ -96,7 +99,6 @@ code {
     &:focus,
     &:hover,
     &:active {
-        background: $background;
         border: 1px solid #{$accent};
     }
 
@@ -138,7 +140,7 @@ code {
 }
 
 .weak {
-    color: $color-weak;
+    color: darken($color, 15);
 }
 
 .italic {
