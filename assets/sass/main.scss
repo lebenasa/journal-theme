@@ -8,7 +8,7 @@ $background: $midnight;
 $color: $paper;
 $accent: $steel;
 $color-link: $yolk;
-$color-visited: $sky;
+$color-visited: lighten($sky, 40);
 $color-disabled: #888;
 $background-control: $steel;
 
