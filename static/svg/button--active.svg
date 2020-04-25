@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 103 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g>
+        <g>
+            <path d="M101.2,4.617C101.2,2.783 99.71,1.293 97.876,1.293L4.524,1.293C2.69,1.293 1.2,2.783 1.2,4.617L1.2,29.968C1.2,31.803 2.69,33.293 4.524,33.293L97.876,33.293C99.71,33.293 101.2,31.803 101.2,29.968L101.2,4.617Z" style="fill:#005082;"/>
+            <path d="M101.2,4.617C101.2,2.783 99.71,1.293 97.876,1.293L4.524,1.293C2.69,1.293 1.2,2.783 1.2,4.617L1.2,29.968C1.2,31.803 2.69,33.293 4.524,33.293L97.876,33.293C99.71,33.293 101.2,31.803 101.2,29.968L101.2,4.617Z" style="fill:#005082;"/>
+        </g>
+        <text x="21.075px" y="23.371px" style="font-family:'OpenSans-Regular', 'Open Sans', sans-serif;font-size:16px;fill:#ecfbfc;">Enabled</text>
+    </g>
+</svg>
