@@ -1,0 +1,7 @@
+{{ $id = .Get "id" }}
+{{ $name = .Get "name" }}
+{{ $value = .Get "value" }}
+<input class="checkbox" type="checkbox" id="{{ $id }}" name="{{ $name }}" value="{{ $value }}" {{ with .Get "disabled" }} disabled {{ end }}>
+<label for="{{ $id }}">
+    {{- .Get "label" -}}
+</label>

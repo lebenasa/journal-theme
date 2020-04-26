@@ -1,0 +1,7 @@
+<select
+    {{ with .Get "id" }}id="{{.}}"{{ end }}
+    {{ with .Get "name" }}name="{{.}}"{{ end }}
+    class="select" {{ with .Get "disabled" }} disabled {{ end }}
+>
+    {{ .Inner }}
+</select>

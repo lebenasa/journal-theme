@@ -1,0 +1,13 @@
+<button 
+    {{ with .Get "id" }}id="{{.}}"{{ end }}
+    {{ with .Get "name" }}name="{{.}}"{{ end }}
+    {{ if (.Get "isSubmit") }}
+        type="submit"
+    {{else}}
+        type="button"
+    {{ end }}
+    class="button
+           {{ with .Get "disabled" }}button--disabled{{ end }}
+           {{ with .Get "class" }}{{.}}{{ end }}">
+    {{- .Get "label" -}}
+</button>
