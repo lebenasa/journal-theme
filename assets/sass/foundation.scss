@@ -127,6 +127,9 @@ code {
     &__caption {
         @include font-s;
         text-align: center;
+        opacity: 0.8;
+        max-width: 800px;
+        margin: 0.5rem auto;
     }
 }
 
