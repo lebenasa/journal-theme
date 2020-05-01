@@ -83,6 +83,17 @@ code {
     line-height: 1.5rem;
 }
 
+blockquote {
+    @include main-column;
+
+    border-left: solid 4px $sky;
+
+    p {
+        padding: 1rem;
+        font-style: italic;
+    }
+}
+
 .link {
     @include link;
 }
