@@ -76,6 +76,10 @@ p {
     @include font-m;
 }
 
+li {
+    margin: 0.5rem auto;
+}
+
 code {
     @include monospace;
 
