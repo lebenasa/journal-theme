@@ -16,6 +16,7 @@
     }
 
     &__summary {
+        @include serif;
         @include main-column;
 
         margin-top: 0;

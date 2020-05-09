@@ -32,6 +32,8 @@
     }
 
     &__summary {
+        @include serif;
+
         margin: 0 0 1rem;
     }
 

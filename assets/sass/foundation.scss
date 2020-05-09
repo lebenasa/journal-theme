@@ -40,8 +40,10 @@
 }
 
 body {
+    @include sans-serif;
+
     font-size: 16px;
-    font-family: Verdana, Helvetica;
+    letter-spacing: 1px;
     background: $background;
     color: $color;
     text-size-adjust: none;
