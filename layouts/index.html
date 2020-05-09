@@ -5,8 +5,8 @@
     {{.Content}}
   </div>
   <div class="card__container">
-    {{ range first 10 .Site.RegularPages }}
-    <article class="card card--huge">
+    {{ range $index, $page := first 10 .Site.RegularPages }}
+    <article class="card {{ if (eq $index 0) }}card--huge{{ end }}">
       <p class="card__category">
         <span class="off-screen">Category</span>
         <span>{{ .Params.category }}</span>
@@ -23,9 +23,6 @@
         {{ if .Description }}
         <p class="card__summary weak">{{ .Description }}</p>
         {{ end }}
-        <p class="card__date">
-          <span class="weak">Published on</span> {{ .PublishDate.Format "2 January 2006" }}.
-        </p>
       </a>
     </article>
     {{ end }}
