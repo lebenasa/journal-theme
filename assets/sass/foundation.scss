@@ -39,19 +39,6 @@
     src: local("UbuntuMono"), url("../font/UbuntuMono-Regular.ttf");
 }
 
-body {
-    @include sans-serif;
-
-    font-size: 16px;
-    letter-spacing: 1px;
-    background: $background;
-    color: $color;
-    text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    -ms-text-size-adjust: none;
-}
-
 h1 {
     @include font-xl;
     @include serif;
@@ -94,6 +81,10 @@ blockquote {
 
     border-left: solid 4px $sky;
 
+    @media (prefers-color-scheme: light) {
+        background: $paper;
+    }
+
     p {
         padding: 1rem;
         font-style: italic;
@@ -106,8 +97,10 @@ blockquote {
 
 .button {
     padding: 0.5em 1em;
-    color: $color;
     background: $background;
+    background: var(--background);
+    color: $color;
+    color: var(--color);
     border: 1px solid transparent;
     border-radius: 0.25em;
     text-decoration: none;
@@ -160,7 +153,8 @@ blockquote {
 }
 
 .weak {
-    color: darken($color, 15);
+    color: $color-weak;
+    color: var(--color-weak);
 }
 
 .italic {

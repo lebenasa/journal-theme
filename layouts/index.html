@@ -11,7 +11,7 @@
         <span class="off-screen">Category</span>
         <span>{{ .Params.category }}</span>
       </p>
-      <a class="card__link link link--nofocus" href="{{ .Permalink }}">
+      <a class="card__link link--nofocus" href="{{ .Permalink }}">
         {{ with .Resources.GetMatch "index_image" }}
         <figure class="card__poster figure">
           <img class="figure__img" src="{{ .RelPermalink }}" />
