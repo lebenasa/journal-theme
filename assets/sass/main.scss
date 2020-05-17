@@ -10,7 +10,7 @@ $accent: $steel;
 $color-link: $yolk;
 $color-visited: lighten($sky, 40%);
 $color-disabled: #888;
-$color-weak: darken($color, 15);
+$color-weak: $sky;
 $background-control: $steel;
 
 @import './foundation.scss';
@@ -45,7 +45,7 @@ $background-control: $steel;
         --background-control: #{$steel};
     }
 
-    $color-weak: lighten($steel, 50%);
+    $color-weak: $steel;
     --background: $fff;
     --color: #{$midnight};
     --accent: #{$steel};
