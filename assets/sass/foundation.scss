@@ -3,40 +3,47 @@
 @font-face {
     font-family: "Merriweather";
     src: local("Merriweather"), url("../font/Merriweather-Regular.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Merriweather";
     src: url("../font/Merriweather-Bold.ttf");
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Merriweather";
     src: url("../font/Merriweather-Italic.ttf");
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "OpenSans";
     src: local("OpenSans"), url("../font/OpenSans-Regular.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "OpenSans";
     src: url("../font/OpenSans-Bold.ttf");
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "OpenSans";
     src: url("../font/OpenSans-Italic.ttf");
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "UbuntuMono";
     src: local("UbuntuMono"), url("../font/UbuntuMono-Regular.ttf");
+    font-display: swap;
 }
 
 h1 {
