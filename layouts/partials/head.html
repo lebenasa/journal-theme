@@ -4,15 +4,17 @@
 <meta name="description" content="{{ .Description | default .Site.Params.description }}">
 <title>
     {{ block "title" . }}
-        {{ with .Params.Title }} {{ . }} | {{ end }}{{ .Site.Title }}
+    {{ with .Params.Title }} {{ . }} | {{ end }}{{ .Site.Title }}
     {{ end }}
 </title>
+
 {{ hugo.Generator }}
 {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
     <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 {{ else }}
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 {{ end }}
+
 {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | fingerprint }}
 <link href="{{ $style.Permalink }}" rel="stylesheet">
@@ -32,9 +34,11 @@
 {{- template "_internal/twitter_cards.html" . -}}
 
 {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-{{ template "_internal/google_analytics_async.html" . }}
+    {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
 
 {{ with getenv "GOOGLE_VERIFICATION" }}
-<meta name="google-site-verification" content="{{ . }}" />
+    <meta name="google-site-verification" content="{{ . }}" />
 {{ end }}
+
+{{ partial "scripts.html" . }}
