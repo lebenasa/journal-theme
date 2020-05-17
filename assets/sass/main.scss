@@ -8,8 +8,9 @@ $background: $midnight;
 $color: $paper;
 $accent: $steel;
 $color-link: $yolk;
-$color-visited: lighten($sky, 40);
+$color-visited: lighten($sky, 40%);
 $color-disabled: #888;
+$color-weak: $sky;
 $background-control: $steel;
 
 @import './foundation.scss';
@@ -18,6 +19,42 @@ $background-control: $steel;
 
 @import './card.scss';
 @import './article.scss';
+
+:root {
+    @include sans-serif;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: $background;
+    background: var(--background);
+    color: $color;
+    color: var(--color);
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+
+    @media (prefers-color-scheme: dark) {
+        --background: #{$midnight};
+        --color: #{$paper};
+        --accent: #{$steel};
+        --color-link: #{$yolk};
+        --color-visited: #{$color-visited};
+        --color-disabled: #888;
+        --color-weak: #{$color-weak};
+        --background-control: #{$steel};
+    }
+
+    $color-weak: $steel;
+    --background: $fff;
+    --color: #{$midnight};
+    --accent: #{$steel};
+    --color-link: #{$steel};
+    --color-visited: #{$color-weak};
+    --color-disabled: #888;
+    --color-weak: #{$color-weak};
+    --background-control: #{$steel};
+}
 
 .main {
     min-height: 100vh;

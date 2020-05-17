@@ -19,6 +19,7 @@
         justify-content: flex-start;
         flex: 0 1 auto;
         padding: 0;
+        text-decoration: none;
 
         @media (min-width: 600px) {
             padding-bottom: 0;
@@ -51,7 +52,7 @@
 
     &__menu-item {
         @include font-m;
-        
+
         padding: 0.5rem;
     }
 }

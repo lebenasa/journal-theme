@@ -1,17 +1,9 @@
 {{ define "main" }}
-  <main role="main" class="{{ .Type }}">
+  <main class="{{ .Type }}">
     <article class="article article--main">
       <p class="article__category">
-        <span>{{ .Params.category }}<span>
-      </p>
-      <h1 class="article__headline">
-        {{ .Title }}
-      </h1>
-      {{ if .Description }}
-        <p class="article__summary">{{ .Description }}</p>
-      {{ end }}
-      <p class="article__date">
-        Published on {{ .PublishDate.Format "2 January 2006" }}.
+        <span class="off-screen">Posted under category:</span>
+        <span>{{ .Params.category }}</span> 
       </p>
       {{ with .Resources.GetMatch "index_image" }}
         <figure class="article__poster figure">
@@ -21,6 +13,16 @@
           </figcaption>
         </figure>
       {{ end }}
+      <h1 class="article__headline">
+        {{ .Title }}
+      </h1>
+      {{ if .Description }}
+        <p class="article__summary weak">{{ .Description }}</p>
+      {{ end }}
+      <p class="article__date">
+        Published on {{ .PublishDate.Format "2 January 2006" }}.
+      </p>
+      
       <div class="article__wrapper">
         {{ .Content }}
       </div>

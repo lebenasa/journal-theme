@@ -1,6 +1,6 @@
 @mixin main-column {
     margin: 1rem auto;
-    max-width: 1280px;
+    max-width: 900px;
 }
 
 @mixin serif {
@@ -17,6 +17,7 @@
 
 @mixin link {
     color: $color-link;
+    color: var(--color-link);
     text-decoration: none;
 
     &:focus,
@@ -27,11 +28,13 @@
 
     &:visited {
         color: $color-visited;
+        color: var(--color-visited);
     }
 
     &--nofocus,
     &--novisit {
         color: $color;
+        color: var(--color);
     }
 
     &--nofocus:focus,
@@ -43,6 +46,7 @@
     &--novisit:visited,
     &--nofocus:visited {
         color: $color;
+        color: var(--color);
     }
 }
 
