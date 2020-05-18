@@ -1,4 +1,4 @@
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+{{ if eq hugo.Environment "production" }}
     <script async="true" defer src="/scripts/index.js" type="application/javascript"></script>
 {{ else }}
     <script async="true" defer src="http://localhost:9000/index.js" type="application/javascript"></script>

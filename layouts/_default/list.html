@@ -12,7 +12,7 @@
           </p>
           {{ with .Resources.GetMatch "index_image" }}
           <figure class="article__poster figure">
-            <img class="figure__img" src="{{ .RelPermalink }}" />
+            <img class="figure__img" src="{{ .RelPermalink }}" alt="{{ .Params.title }}" />
           </figure>
           {{ end }}
           <h1 class="article__headline">
@@ -29,4 +29,3 @@
     </div>
   </main>
 {{ end }}
-
